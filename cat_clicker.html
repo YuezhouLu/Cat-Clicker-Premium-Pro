@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Cat Clicker</title>
+
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+
+        .main {
+            padding: 3.5% 3.5% 3.5% 10%;
+        }
+
+        .navigation {
+            width: 15%;
+            display: inline-block;
+        }
+
+        #cat-list {
+            padding: 80px 0 0 30%;
+        }
+        
+        #cat-display-area {
+            width: 60%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #cat-name {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #cat-img {
+            display: block;
+            margin: auto;
+            cursor: grab;
+            text-align: center;
+        }
+        
+        #click-count {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 16px;
+        }
+        
+        #admin-wrapper {
+            width: 15%;
+            display: inline-block;
+            vertical-align: top;
+            margin: 80px 0 0 30px;
+        }
+
+        #admin-button {
+            background-color: #6666FF;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        #admin-button:hover {
+            background-color: blue;
+        }
+
+        #cancel-button {
+            background-color: #FF6666;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #cancel-button:hover {
+            background-color: red;
+        }
+
+        #save-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #save-button:hover {
+            background-color: green;
+        }
+
+    </style>
+
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <nav class="navigation">
+            <ul id="cat-list"></ul>
+        </nav>
+
+        <div id="cat-display-area">
+            <h2 id="cat-name"></h2>
+            <figure>
+                <img id="cat-img" src="" alt="" width="90%" height="auto">
+                <figcaption id="click-count"></figcaption>
+            </figure>
+        </div>
+
+        <div id="admin-wrapper">
+            <button id="admin-button">Admin</button>
+            <br><br>
+            <div id="admin-area">
+                <form id="admin-form"> <!-- This form actually has not been used in the script, just a decorate. -->
+                    <!-- We were using the following 3 inputsElement.value to extract the user input content. -->
+                    <br><br>
+                    <label for="cat-rename">Name of the new cat:</label>
+                    <input type="text" id="cat-rename" value="" required>
+                    <br><br>
+                    <br><br>
+                    <label for="cat-rephoto">Input a new Cat photo URL:</label>
+                    <input type="url" id="cat-rephoto" value="" required>
+                    <br><br>
+                    <br><br>
+                    <label for="cat-reclick">Customize click count:</label>
+                    <br>
+                    <input type="number" id="cat-reclick" value="" required>
+                    <br><br>
+                    <br><br>
+
+                    <button type="button" id="cancel-button">Cancel</button>
+                    <button type="button" id="save-button"><strong>Save</strong></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
